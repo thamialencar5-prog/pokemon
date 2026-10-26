@@ -1,5 +1,5 @@
-import express from 'express'
-import { pokemonRouter } from '../Routes/pokemon.Routes.js'
+import express  from 'express'
+import { pokemonRouter } from '../Routes/pokemon.routes.js'
 
 const app = express()
 const port = 3000
@@ -16,4 +16,5 @@ app.use("/pokemon", pokemonRouter)
 
 app.listen(port, () => {
     console.log(`app rodando em http://localhost:3000`);
+
 })

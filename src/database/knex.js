@@ -1,8 +1,8 @@
-import knexConfig from "knex"
-import "dotenv/config"
+import knexConfig from 'knex'
+import 'dotenv/config'
 
 export const knex = knexConfig({
-    client: "pg",
+    client: 'pg',
     connection: {},
     debug: true
 })

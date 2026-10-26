@@ -1,10 +1,11 @@
-import { pool } from 'database/db.js';
+import { pool  } from 'database/db.js';
 
-class PokemonService {
+class Pokemonservice {
     async listarpokemon() {
         const res = await pool.query("SELECT * FROM pokemon");
-        return res.row;
+        return res;
 
     }
 }
-export const pokemonService = new PokemonService();
+export const pokemonservice = new Pokemonservice();
+
