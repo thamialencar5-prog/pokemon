@@ -1,14 +1,17 @@
+
 import { Router } from 'express';
-import { pokemonService } from './services/pokemon.services.js';
+import { pokemonController } from '../controller/pokemon.controller.js';
 
 export const pokemonRouter = Router();
 
-pokemonRouter.get("/", async (req, res) => {
-    const pokemon = await pokemonService.getAll();
-    return res.json(pokemon);
-});
+pokemonRouter.get('/', pokemonController.getAll);
+pokemonRouter.get('/:id', pokemonController.getById);
 
-pokemonRouter.post("/", async (req, res) => {
-    const pokemon = await pokemonService.create(req.body);
-    return res.status(201).json(pokemon);
-});
+pokemonRouter.post('/', pokemonController.create);
+
+pokemonRouter.put('/:id', pokemonController.updatePut);
+pokemonRouter.patch('/:id', pokemonController.updatePatch);
+
+pokemonRouter.delete('/:id', pokemonController.delete);
+
+

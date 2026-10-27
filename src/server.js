@@ -1,5 +1,5 @@
 import express  from 'express'
-import { pokemonRouter } from '../Routes/pokemon.routes.js'
+import { pokemonRouter } from './Routes/pokemon.routes.js'
 
 const app = express()
 const port = 3000
